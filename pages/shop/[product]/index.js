@@ -106,7 +106,7 @@ export async function getStaticProps(context) {
   const response = await simplyFetchFromGraph({
     query: `
          query ITEM_TYPE($path: String!) {
-           catalogue(language: "en", path: $path) {
+           catalogue(language: "en", path: $path, version: draft) {
              name
             ... on Product {
               id
